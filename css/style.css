@@ -6,15 +6,19 @@ body{
 @media screen and (max-width: 500px) {
    #indexwraper{
     display: grid;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 1000vh;
     gap: 1vh;
     grid-template-columns: 33% 33% 33%;
-    grid-template-rows:20% 40% 40% 20%;
+    grid-template-rows:20vh 70vh 40vh 40vh 10vh 20vh;
     grid-template-areas: 
     'hd hd hd'
+    'gf gf gf'
     'imga imgb imgc'
     'ar ar ar'
+    'c1 c1 c1'
+    'c2 c2 c2'
+    'c3 c3 c3'
     'sb sb sb';
 }  
 
@@ -72,10 +76,21 @@ body{
 @media (min-width: 800px) {  
     
 }
+
 }
 #header{
     grid-area: hd;
     background-color: blueviolet;
+    position: sticky;
+    top: 0;
+    padding: 10px 16px;
+}
+
+#gif{
+    grid-area: gf;
+    background-color: purple;
+    padding: 10px;
+    height: ;
 }
 
 .imga{
@@ -97,6 +112,11 @@ body{
 #article{
     grid-area: ar;
     background-color: pink;    
+}
+
+
+.Card1{
+background-color: black;
 }
 
 #botten{
