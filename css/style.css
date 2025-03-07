@@ -10,7 +10,7 @@ body{
     height: 1000vh;
     gap: 1vh;
     grid-template-columns: 33% 33% 33%;
-    grid-template-rows:20vh 70vh 40vh 40vh 10vh 20vh;
+    grid-template-rows:20vh 70vh 40vh 40vh 30vh 30vh 30vh 20vh;
     grid-template-areas: 
     'hd hd hd'
     'gf gf gf'
@@ -24,8 +24,8 @@ body{
 
 
 .menu{
-    height: 100vh;
-    width: 80vw;
+    height: 70vh;
+    width: 40vw;
     background: cornflowerblue;
     position: fixed;
     top: 0;
@@ -41,7 +41,7 @@ body{
 }
 
 .menu-button i.material-icons{
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .show{
@@ -90,7 +90,7 @@ body{
     grid-area: gf;
     background-color: purple;
     padding: 10px;
-    height: ;
+    height:1000p ;
 }
 
 .imga{
@@ -109,14 +109,48 @@ body{
     background-color: orange;
 }
    
-#article{
+article{
     grid-area: ar;
-    background-color: pink;    
+    background-color: pin;    
 }
 
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 33vh;
 
+}
+.card{
+    flex: 100px;
+    margin: 10px;
+    border: 1px solid black;
+    box-shadow: ;
+}
+.card img {
+    max-width: 100%;
+}
+.card .text{
+    padding:20px;
+}
+.card .text > button{
+    background-color: gray;
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
 .Card1{
-background-color: black;
+    grid-area: c1;
+    background-color: black;
+}
+.Card2{
+    grid-area: c2;
+    background-color: gold;
+}
+.Card3{
+    grid-area: c3;
+    background-color: brown;
 }
 
 #botten{
