@@ -2,7 +2,7 @@ body{
     margin: 0px;
 }
 
-
+/*css för iphone */
 @media screen and (max-width: 500px) {
    #indexwraper{
     display: grid;
@@ -10,15 +10,12 @@ body{
     height: 1000vh;
     gap: 1vh;
     grid-template-columns: 33% 33% 33%;
-    grid-template-rows:20vh 70vh 40vh 40vh 30vh 30vh 30vh 20vh;
+    grid-template-rows:20vh 70vh 40vh 60vh 20vh;
     grid-template-areas: 
     'hd hd hd'
     'gf gf gf'
     'imga imgb imgc'
     'ar ar ar'
-    'c1 c1 c1'
-    'c2 c2 c2'
-    'c3 c3 c3'
     'sb sb sb';
 }  
 
@@ -64,18 +61,6 @@ body{
 }
 
 
-@media (max-width: 600px) {
-    body{
-        background-color: aliceblue;
-    }
-    p{
-        color:red;
-    }
-}
-
-@media (min-width: 800px) {  
-    
-}
 
 }
 #header{
@@ -90,7 +75,7 @@ body{
     grid-area: gf;
     background-color: purple;
     padding: 10px;
-    height:1000p ;
+  
 }
 
 .imga{
@@ -109,51 +94,35 @@ body{
     background-color: orange;
 }
    
-article{
+#article{
     grid-area: ar;
-    background-color: pin;    
+    background-color: blue;  
 }
 
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 33vh;
-
-}
 .card{
-    flex: 100px;
-    margin: 10px;
-    border: 1px solid black;
-    box-shadow: ;
-}
-.card img {
-    max-width: 100%;
-}
-.card .text{
-    padding:20px;
-}
-.card .text > button{
-    background-color: gray;
-    border: 0;
-    color: white;
+    grid-area:ar ;
+    box-sizing: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0,3s;
+    border-radius: 10px;
+    margin: 20px;
     padding: 10px;
+    border: 4px black solid;
+}
+.card img{
+    border-radius:  5px 5px 0 0;
     width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
-.Card1{
-    grid-area: c1;
-    background-color: black;
-}
-.Card2{
-    grid-area: c2;
-    background-color: gold;
-}
-.Card3{
-    grid-area: c3;
-    background-color: brown;
-}
+
 
 #botten{
     grid-area: sb;
     background-color: green;
+}   
+
+/*css för desktop */
+
+@media screen and (min-width:501px) {
+    
 }
