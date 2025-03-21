@@ -17,21 +17,17 @@ function showMenu(){
 
 
  document.addEventListener('DOMContentLoaded', function () {
-    const heroSection = document.querySelector('.gif')
-    const videoElement = document.qurentElemnt('.video')
+    const heroSection = document.querySelector('#gif')
+    const videoElement = heroSection.querySelector('.video')
 
     videoElement.className = 'hero-video';
     videoElement.autoplay = true;
     videoElement.muted = true; 
-    videoElement. loop = true;
-    videoElement.playInline = true; 
+    videoElement.loop = true;
+    videoElement.playsinline = true; 
 
 
-    const sourceElement = document.createElement('source');
-    sourceElemen.src = '/video/Film biograd.mp4';
-    sourceElement.type = 'video/mp4';
+    videoElement.src = "Video/Film biograf.mp4";
 
-    videoElement.appendChild(sourceElement);
 
-    heroSection.insertBefore(videoElement, heroSection.firstChild)
 });
