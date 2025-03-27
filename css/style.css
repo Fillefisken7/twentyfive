@@ -1,213 +1,305 @@
-body{
-    margin: 0px;
+body {
+    margin: 0;
     background-color: purple;
+    box-sizing: border-box;
 }
 
 /*css för iphone */
 @media screen and (max-width: 500px) {
-   #indexwraper{
-    display: grid;
-    width: 100vw;
-    height: auto;
-    gap: 1vh;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows:20vh 70vh 20vh 40vh 65vh 65vh 21vh;
-    grid-template-areas: 
-    'hd hd hd'
-    'gf gf gf'
-    'tx tx tx'
-    'imga imgb imgc'
-    'ar ar ar'
-    'ar2 ar2 ar2'
-    'sb sb sb'
-}  
+    #indexwraper {
+        display: grid;
+        width: 100vw;
+        height: auto;
+        gap: 1vh;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 20vh 70vh 20vh 40vh 65vh 65vh 21vh;
+        grid-template-areas:
+            'hd hd hd'
+            'gf gf gf'
+            'tx tx tx'
+            'imga imgb imgc'
+            'ar ar ar'
+            'ar2 ar2 ar2'
+            'ft ft ft'
+    }
 
 
-.menu{
-    height: 70vh;
-    width: 40vw;
-    background: cornflowerblue;
-    position: fixed;
-    top: 0;
-    left: -90vw;
-    transition: left 0.3s;
-    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-    z-index: 10;
-}
+    .menu {
+        height: 70vh;
+        width: 40vw;
+        background: cornflowerblue;
+        position: fixed;
+        top: 0;
+        left: -90vw;
+        transition: left 0.3s;
+        box-shadow: 10px 0px 21px -10px rgba(0, 0, 0, 0.75);
+        z-index: 10;
+    }
 
-.menu-button{
-    cursor: pointer;
-    display: inline;
-}
+    .menu-button {
+        cursor: pointer;
+        display: inline;
+    }
 
-.menu-button i.material-icons{
-    font-size: 3rem;
-}
+    .menu-button i.material-icons {
+        font-size: 3rem;
+    }
 
-.show{
-    left: 0;
-}
+    .show {
+        left: 0;
+    }
 
-.fade-layer{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    display: none;
-    z-index: 5;
-}
+    .fade-layer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 5;
+    }
 
-.fade-layer.visible{
-    display: block;
-}
+    .fade-layer.visible {
+        display: block;
+    }
 
-#header{
-    grid-area: hd;
-    background-color: blueviolet;
-    position: sticky;
-    top: 0;
-    padding: 10px 16px;
-    z-index: 9;
-}
+    #header {
+        grid-area: hd;
+        background-color: blueviolet;
+        position: sticky;
+        top: 0;
+        padding: 10px 16px;
+        z-index: 9;
+    }
 
-#gif{
-    grid-area: gf;
-    background-color: purple;
-    padding: 5px; 
-    position: relative; 
-}
+    #gif {
+        grid-area: gf;
+        background-color: purple;
+        padding: 5px;
+        position: relative;
+    }
 
-#gif video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
+    #gif video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
 
-}
-.video-overlay-text{
-    position: absolute;
-    top: 18%;
-    left: 18%;
-    color: white;
-    text-align: center;
-    z-index: 2;
-    width: 70%;
-}
-.video-overlay-text h1{
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    }
 
-}
+    .video-overlay-text {
+        position: absolute;
+        top: 18%;
+        left: 18%;
+        color: white;
+        text-align: center;
+        z-index: 2;
+        width: 70%;
+    }
+
+    .video-overlay-text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+
+    }
 
 
-.text_info{
-    grid-area: tx;
-    background-color: aliceblue;
-    text-align: center;
-}
-.imga, #imgb, #imgc{
-    height: 100%;
-    padding: 5px;
+    .text_info {
+        grid-area: tx;
+        background-color: aliceblue;
+        text-align: center;
+    }
 
-}
-.imga{
-    grid-area: imga;
-    background-color: red;
-   position: relative;
-}
+    .imga,
+    #imgb,
+    #imgc {
+        height: 100%;
+        padding: 5px;
 
-#imgb{
-    grid-area: imgb;
-    background-color: turquoise;
-    position: relative;
-}
+    }
 
-#imgc{
-    grid-area: imgc;
-    background-color: orange;
-    position: relative;
-}
-.imga img, #imgb img, #imgc img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: relative;
-}
- 
-#play_icon{
-    position: absolute;
-    top: 40%;
-    left: 38%;
-    color: white;
-    z-index: 2;
-   font-size: 50px;
-   
-}
-#article{
-    grid-area: ar;
-    background-color: blue;  
-}
+    .imga {
+        grid-area: imga;
+        background-color: red;
+        position: relative;
+    }
 
-.card{ 
-    box-sizing: content-box;
-    transition: 0,3s;
-    border-radius: 10px;
-    margin: 20px;
-    padding: 10px;
-    border: 4px black solid;
-    z-index: 1;
-}
-.card img{
-    border-radius:  5px 5px 0 0;
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-.card{
-    grid-area:ar ;
-}
-.card-andra{
-    grid-area: ar2;
-}
-.container {
-    position: relative;
-}
+    #imgb {
+        grid-area: imgb;
+        background-color: turquoise;
+        position: relative;
+    }
 
-.material-symbols-outlined{
-    position: absolute;
-    top: 50%;
-    z-index: 10000;
-}
-.container p {
-   width: 75%;
-   margin: 0;
-   padding-right: 10px;
-   max-height: 120px;
-   overflow-y: auto;
-}
-.btn{
-    width: 22%;
-    height: 29%;
-    font-size: 1rem;
-    position: absolute;
-    right: 0;
-    top: 55%;
-    padding: 12px;
-    background-color: #4CAF50;
-    color: white;
-    border: 2px solid black;
-    border-radius: 4px;
-    
-}
-#botten{
-    grid-area: sb;
-    background-color: green;
-}   
+    #imgc {
+        grid-area: imgc;
+        background-color: orange;
+        position: relative;
+    }
 
-/*css för desktop */
+    .imga img,
+    #imgb img,
+    #imgc img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+    }
 
-@media screen and (min-width:501px) {
-    
-}
+    #play_icon {
+        position: absolute;
+        top: 40%;
+        left: 38%;
+        color: white;
+        z-index: 2;
+        font-size: 50px;
+
+    }
+
+    #article {
+        grid-area: ar;
+        background-color: blue;
+    }
+
+    .card {
+        box-sizing: content-box;
+        transition: 0, 3s;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 10px;
+        border: 4px black solid;
+        z-index: 1;
+    }
+
+    .card img {
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .card {
+        grid-area: ar;
+    }
+
+    .card-andra {
+        grid-area: ar2;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .material-symbols-outlined {
+        position: absolute;
+        top: 50%;
+        z-index: 10000;
+    }
+
+    .container p {
+        width: 75%;
+        margin: 0;
+        padding-right: 10px;
+        max-height: 120px;
+        overflow-y: auto;
+    }
+
+    .btn {
+        width: 22%;
+        height: 29%;
+        font-size: 1rem;
+        position: absolute;
+        right: 0;
+        top: 55%;
+        padding: 12px;
+        background-color: #4CAF50;
+        color: white;
+        border: 2px solid black;
+        border-radius: 4px;
+
+    }
+
+    footer {
+        grid-area: ft;
+        background-color: #4CAF50;
+        padding-top: 50px 0;
+        width: 100%;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-content {
+        padding: 20px;
+    }
+
+    .footer-content h3 {
+        font-size: 25px;
+        margin-bottom: 15px;
+        color: white;
+    }
+
+    .footer-content p,
+    .footer-content ul {
+        color: white;
+        margin: 5px 0;
+    }
+
+    .footer-content ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-content ul li {
+        margin: 5px 0;
+    }
+
+    .footer-content a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+    }
+
+    .social-icons {
+        list-style-type: none;
+        padding: 2px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-icons li {
+        margin: 0 10px;
+    }
+
+    .social-icons i {
+        color: white;
+        font-size: 25px;
+    }
+
+    .bottom-bar {
+        background-color: aqua;
+        text-align: center;
+        padding: 15px 0;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom-bar p {
+        margin: 0;
+        font-size: 15px;
+
+    }
+
+    /*css för desktop */
+
+    @media screen and (min-width:501px) {
+        
+    }
