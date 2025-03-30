@@ -1,17 +1,15 @@
 body {
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     background-color: purple;
     box-sizing: border-box;
 }
 
-/*css för iphone */
+/*css för iphone main */
 @media screen and (max-width: 500px) {
     #indexwraper {
         display: grid;
-        width: 100%;
-        height: auto;
-        gap: 1vh;
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: 1fr 1fr 1fr ;
         grid-template-rows: 20vh 70vh 20vh 40vh 65vh 65vh 21vh;
         grid-template-areas:
             'hd hd hd'
@@ -34,18 +32,21 @@ body {
         transition: left 0.3s;
         box-shadow: 10px 0px 21px -10px rgba(0, 0, 0, 0.75);
         z-index: 1000;
+        text-decoration: none;
     }
 
     .menu-button {
-        cursor: pointer;
-        display: inline;
+   position: fixed;
+   top: 15px;
+   left: 15px;
+   z-index: ;
     }
 
     .menu-button i.material-icons {
         font-size: 3rem;
     }
 
-    .show {
+    .menu.show {
         left: 0;
     }
 
@@ -57,11 +58,17 @@ body {
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.5);
         display: none;
-        z-index: 5;
+       transition: opacity 0.3s;
+        z-index: 999;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
     }
 
     .fade-layer.visible {
-        display: block;
+        opacity: 1;
+        pointer-events: auto;
     }
 
     #header {
@@ -71,6 +78,18 @@ body {
         top: 0;
         padding: 10px 16px;
         z-index: 9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+
+    }
+
+    .logo-img{
+        max-height: 100px;
+        width: auto;
+        z-index: 10000000;
+        
     }
 
     #gif {
@@ -102,6 +121,20 @@ body {
         font-size: 2.5rem;
         margin-bottom: 1rem;
 
+    }
+
+    .video-overlay-text .video-overlay-button{
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 10px;
+        border-radius: 5px;
+    
     }
 
 
@@ -224,6 +257,7 @@ body {
         background-color: #4CAF50;
         padding-top: 50px 0;
         width: 100%;
+        border-radius: 5px;
     }
 
     .footer-container {
@@ -232,6 +266,9 @@ body {
         gap: 20px;
         padding: 20px;
         text-align: center;
+        margin: 0;
+        
+
     }
 
     .footer-content {
@@ -298,6 +335,261 @@ body {
         color: white;
 
     }
+ /*css för about-page */
+ #indexwraper.about-page{
+    display: grid;
+    width: 100%;
+    height: auto;
+    gap: 1vh;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    'hd'
+    'hero'
+    'company'
+    'team'
+    'stats'
+    'ft';
+
+ }
+ .about-hero{
+    grid-area: hero;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 5px;
+
+ }
+ .about-hero h1{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+ }
+
+ .company-info{
+    grid-area: company;
+    background-color: #f4f4f4;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 5px;
+ }
+ .company-info p{
+    grid-area: company;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-size: 1.8rem;
+ }
+ 
+ 
+ .team-section{
+    grid-area: team;
+    background-color: black;
+    padding: 10px 20px;
+    text-align: center;
+ }
+
+ .team-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+ }
+ 
+ .team-members{
+    background-color: bisque;
+    border-radius: 10px;
+    padding: 20px;
+    
+ }
+
+ .team-members img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+ }
+ .team-members h3{
+    margin: 10px 0 5px;
+    font-size: 1.2rem
+ }
+
+ .company-stats{
+    grid-area: stats;
+    background-color: blue;
+    color: white;
+    padding: 0px 10px;
+    text-align: center;
+    border-radius: 5px;
+
+ }
+
+ .stats-grid{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    border-radius: 5px;
+
+ }
+ 
+ .stats-grid h3{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+ }
+
+
+ .stats-item p{
+    font-size: 1 rem;
+ }
+
+ .footer-container{
+    
+ }
+   /*css för kategorerier */
+ #indexwraper.kategorier-page{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'hd'
+    'banner'
+    'top'
+    'cat1'
+    'cat2'
+    'cat3'
+    'ft';
+    gap: 15px;
+ }
+
+ .page-banner{
+    grid-area: banner;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+ }
+ .page-banner h1{
+    font-size: 2rem;
+    margin-bottom: 5px;
+ }
+ .page-banner p{
+    font-size: 1rem;
+    margin-top: 0;
+ }
+ .top-movies{
+    grid-area: top;
+    padding: 10px;
+ }
+ .top-movies h2{
+  text-align: center;
+  color: white;
+  margin-bottom: 15px;
+ }
+ .top-movies-card{
+background-color: white;
+border-radius: 10px;
+margin-bottom: 20px;
+overflow: hidden;
+box-shadow: ;
+ }
+
+ .top-movies-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+ }
+
+ .movie-info{
+    padding: 15px;
+ }
+ .movie-info h3{
+   margin-top: 0;
+   font-size: 1.5rem;
+ }
+ .rating{
+    color: #FFD700;
+    margin: 5px o;
+ }
+
+ .movie-info p{
+    margin: 10px 0;
+ }
+ 
+ .movie-info .play_button{
+    display: flex;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    width: fit-content;
+ }
+ .movie-info .material-symbols-outlined{
+    position: relative;
+    top: 0;
+    margin-right: 5px;
+ }
+
+ .kategorier-section{
+    padding: 10px;
+    margin-bottom: 15px;
+ }
+
+ .kategorier-section:nth-of-type(1){
+    grid-area: cat1;
+ }
+ .kategorier-section:nth-of-type(2){
+    grid-area: cat2;
+ }
+ .kategorier-section:nth-of-type(3){
+    grid-area: cat3;
+ }
+
+ .kategorier-section h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+ }
+
+.kategorier-grid{
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: ;
+}
+.kategorier-card img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.kategorier-card h4{
+    margin: 5px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.rating-samll{
+    display: flex;
+    justify-content: center;
+    color:#FFD700 ;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+}
+
+.se-mer{
+    display: block;
+    background-color:#4CAF50 ;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 15px auto;
+    border-radius: 5px;
+}
+
 
     /*css för desktop */
 
