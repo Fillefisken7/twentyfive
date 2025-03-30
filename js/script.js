@@ -22,6 +22,22 @@ layer.addEventListener("click",function () {
     }
 })
 
+function playPauseVideo(button){
+    const videoContainer = button.closest('.film-video-container');
+    const video = videoContainer.querySelector('video');
+    
+    if(video.paused){
+        video.play();
+        button.style.opacity = '0';
+    } else {
+        video.paused();
+        button.style.opacity = '1'
+    }
+    video.onended = function() {
+        button.style.opacity = '1'
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const heroSection = document.querySelector('#gif')
     const videoElement = heroSection.querySelector('.video')

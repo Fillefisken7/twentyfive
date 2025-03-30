@@ -1,12 +1,12 @@
 body {
     padding: 0px;
     margin: 0px;
-    background-color: purple;
+    background-color: #d7d7d5 ;
     box-sizing: border-box;
 }
 
 /*css för iphone main */
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
     #indexwraper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr ;
@@ -28,10 +28,10 @@ body {
         background: cornflowerblue;
         position: fixed;
         top: 0;
-        left: -90vw;
+        left: -900px;
         transition: left 0.3s;
         box-shadow: 10px 0px 21px -10px rgba(0, 0, 0, 0.75);
-        z-index: 1000;
+        z-index: 100;
         text-decoration: none;
     }
 
@@ -39,7 +39,7 @@ body {
    position: fixed;
    top: 15px;
    left: 15px;
-   z-index: ;
+   z-index:999999999999999999 ;
     }
 
     .menu-button i.material-icons {
@@ -48,6 +48,10 @@ body {
 
     .menu.show {
         left: 0;
+    }
+
+    .menu a{
+        text-decoration: none;
     }
 
     .fade-layer {
@@ -73,7 +77,7 @@ body {
 
     #header {
         grid-area: hd;
-        background-color: blueviolet;
+        background-color: #5a2f38;
         position: sticky;
         top: 0;
         padding: 10px 16px;
@@ -94,7 +98,7 @@ body {
 
     #gif {
         grid-area: gf;
-        background-color: purple;
+        background-color: #5a2f38;
         padding: 5px;
         position: relative;
     }
@@ -115,6 +119,7 @@ body {
         text-align: center;
         z-index: 2;
         width: 70%;
+        text-decoration: ;
     }
 
     .video-overlay-text h1 {
@@ -124,7 +129,7 @@ body {
     }
 
     .video-overlay-text .video-overlay-button{
-        background-color: #4CAF50;
+        background-color: #d7d7d5;
         border: none;
         color: white;
         padding: 10px 20px;
@@ -136,6 +141,7 @@ body {
         border-radius: 5px;
     
     }
+  
 
 
     .text_info {
@@ -184,7 +190,7 @@ body {
         top: 40%;
         left: 38%;
         color: white;
-        z-index: 2;
+        z-index: ;
         font-size: 50px;
 
     }
@@ -254,7 +260,7 @@ body {
 
     footer {
         grid-area: ft;
-        background-color: #4CAF50;
+        background-color: #828d8b;
         padding-top: 50px 0;
         width: 100%;
         border-radius: 5px;
@@ -354,7 +360,7 @@ body {
  }
  .about-hero{
     grid-area: hero;
-    background-color: blueviolet;
+    background-color: #828d8b;
     color: white;
     text-align: center;
     padding: 30px 20px;
@@ -368,7 +374,7 @@ body {
 
  .company-info{
     grid-area: company;
-    background-color: #f4f4f4;
+    background-color: #d7d7d5;
     padding: 30px 20px;
     text-align: center;
     font-size: 2rem;
@@ -376,7 +382,7 @@ body {
  }
  .company-info p{
     grid-area: company;
-    background-color: #f4f4f4;
+    background-color: #d7d7d5;
     text-align: center;
     font-size: 1.8rem;
  }
@@ -384,7 +390,7 @@ body {
  
  .team-section{
     grid-area: team;
-    background-color: black;
+    background-color: #d7d7d5;
     padding: 10px 20px;
     text-align: center;
  }
@@ -397,7 +403,7 @@ body {
  }
  
  .team-members{
-    background-color: bisque;
+    background-color: #828d8b;
     border-radius: 10px;
     padding: 20px;
     
@@ -417,7 +423,7 @@ body {
 
  .company-stats{
     grid-area: stats;
-    background-color: blue;
+    background-color: #5a2f38;
     color: white;
     padding: 0px 10px;
     text-align: center;
@@ -441,6 +447,648 @@ body {
 
  .stats-item p{
     font-size: 1 rem;
+ }
+
+ .footer-container{
+    
+ }
+   /*css för kategorerier */
+ #indexwraper.kategorier-page{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'hd'
+    'banner'
+    'top'
+    'cat1'
+    'cat2'
+    'cat3'
+    'ft';
+    gap: 15px;
+ }
+
+ .page-banner{
+    grid-area: banner;
+    background-color: #d7d7d5;
+    color: #5a2f38;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+ }
+ .page-banner h1{
+    font-size: 2rem;
+    margin-bottom: 5px;
+ }
+ .page-banner p{
+    font-size: 1rem;
+    margin-top: 0;
+ }
+ .top-movies{
+    grid-area: top;
+    padding: 10px;
+ }
+ .top-movies h2{
+  text-align: center;
+  color: #5a2f38;
+  margin-bottom: 15px;
+  
+ }
+ .top-movies-card{
+background-color: #d7d7d5;
+border-radius: 10px;
+margin-bottom: 20px;
+overflow: hidden;
+box-shadow: ;
+ }
+
+ .top-movies-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+ }
+
+ .movie-info{
+    padding: 15px;
+ }
+ .movie-info h3{
+   margin-top: 0;
+   font-size: 1.5rem;
+ }
+ .rating{
+    color: #FFD700;
+    margin: 5px o;
+ }
+ .rating p {
+    color: #5a2f38;
+    margin: 5px o;
+ }
+
+ .movie-info p{
+    margin: 10px 0;
+ }
+ 
+ .movie-info .play_button{
+    display: flex;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    width: fit-content;
+ }
+ .play_button{
+    text-decoration: none;
+ }
+ .movie-info .material-symbols-outlined{
+    position: relative;
+    top: 0;
+    margin-right: 5px;
+ }
+
+ .kategorier-section{
+    padding: 10px;
+    margin-bottom: 15px;
+ }
+
+ .kategorier-section:nth-of-type(1){
+    grid-area: cat1;
+ }
+ .kategorier-section:nth-of-type(2){
+    grid-area: cat2;
+ }
+ .kategorier-section:nth-of-type(3){
+    grid-area: cat3;
+ }
+
+ .kategorier-section h2{
+    color: #5a2f38;
+    text-align: center;
+    margin-bottom: 15px;
+ }
+ .kategorier-section p{
+    text-align: left;
+    margin: ;
+
+ }
+.kategorier-grid{
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.film-video-container{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+.film-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-play-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.card-play-button .material-symbols-outlined{
+    font-size: 40px;
+}
+
+.kategori-card{
+    width: 100%;
+    padding-bottom: 15px;
+}
+.kategorier-card h4{
+    margin: 5px;
+    font-size: 0.9rem;
+    text-align: left;
+}
+.rating-samll{
+    display: flex;
+    justify-content: center;
+    color:#FFD700 ;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+}
+
+.se-mer{
+    display: block;
+    background-color:#4CAF50 ;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 15px auto;
+    border-radius: 5px;
+}
+
+
+    /*css för desktop */
+
+    @media screen and (min-width:501px) {
+            #indexwraper {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr ;
+                grid-template-rows: auto;
+                grid-template-areas:
+                    'hd hd hd'
+                    'gf gf gf'
+                    'tx tx tx'
+                    'imga imgb imgc'
+                    'ar ar ar'
+                    'ar2 ar2 ar2'
+                    'ft ft ft';
+                    gap: 20px;
+                
+            }
+        
+        
+            .menu {
+                height: 50%;
+                width: 20%;
+                position: fixed;
+                top: 0;
+                left: -100vw;
+                transition: left 0.3s;
+                box-shadow: 10px 0px 21px -10px rgba(0, 0, 0, 0.75);
+                z-index:1 ;
+                text-decoration: none;
+            }
+        
+            .menu-button {
+           position: fixed;
+           top: 15px;
+           left: 15px;
+           z-index:9999999 ;
+            }
+        
+            .menu-button i.material-icons {
+                font-size: 4rem;
+            }
+        
+            .menu.show {
+                left: 50;
+                z-index: 9999999999999999999999999999;
+            }
+        
+            .menu a{
+                text-decoration: none;
+                
+            }
+        
+            .fade-layer {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+               transition: opacity 0.3s;
+                z-index: 998;
+                display: block;
+                visibility: hidden;
+                pointer-events: none;
+            }
+        
+            .fade-layer.visible {
+                opacity: 1;
+                visibility: visible;
+            }
+        
+            #header {
+                grid-area: hd;
+                background-color: #5a2f38;
+                position: sticky;
+                top: 0;
+                padding: 20px 40px;
+                z-index: 9000;
+                display: flex;
+                justify-content: space-around;
+
+        
+            }
+        
+            .logo-img{
+                max-height: 100px;
+                width: auto;
+                z-index: 10000000;
+                
+            }
+        
+            #gif {
+                grid-area: gf;
+                background-color: #5a2f38;
+                padding: 5px;
+                position: relative;
+            }
+        
+            #gif video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 25px;
+        
+            }
+        
+            .video-overlay-text {
+                position: absolute;
+                top: 18%;
+                left: 18%;
+                color: white;
+                text-align: center;
+                z-index: 2;
+                width: 70%;
+                text-decoration: none;
+            }
+        
+            .video-overlay-text h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+        
+            }
+        
+             .video-overlay-button{
+                background-color: #d7d7d5;
+                border: none;
+                color: #828d8b;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-top: 10px;
+                border-radius: 10px;
+            
+            }
+          
+        
+        
+            .text_info {
+                grid-area: tx;
+                background-color: #d7d7d5;
+                text-align: center;
+
+            }
+        
+            .imga,
+            #imgb,
+            #imgc {
+                height: 100%;
+                padding: 5px;
+                border-radius: 5px;
+        
+            }
+        
+            .imga {
+                grid-area: imga;
+                background-color: #5a2f38;
+                position: relative;
+            }
+        
+            #imgb {
+                grid-area: imgb;
+                background-color: #5a2f38;
+                position: relative;
+            }
+        
+            #imgc {
+                grid-area: imgc;
+                background-color: #5a2f38;
+                position: relative;
+            }
+        
+            .imga img,
+            #imgb img,
+            #imgc img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                position: relative;
+            }
+        
+            #play_icon {
+                position: absolute;
+                top: 40%;
+                left: 45%;
+                color: white;
+                z-index: 2;
+                font-size: 50px;
+        
+            }
+        
+            #article {
+                grid-area: ar;
+
+            }
+        
+            .card {
+                width: 700px;
+                margin: 20px auto;
+                padding: 15px;
+                border: 4px black solid;
+                border-radius: 10px;
+                text-align: center;
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            }
+        
+            .card img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                border-radius:10px 10px 0 0;
+
+            }
+        
+            .card {
+                grid-area: ar;
+            }
+        
+            .card-andra {
+                grid-area: ar2;
+            }
+        
+            .container {
+                position: relative;
+            }
+        
+            .material-symbols-outlined {
+                position: absolute;
+                top: 50%;
+                z-index: 10000;
+            }
+        
+            .container p {
+                width: 78%;
+                margin: 0;
+                padding-right: 10px;
+                max-height: 150px;
+                overflow-y: auto;
+            }
+        
+            .btn {
+                width: 22%;
+                height: 29%;
+                font-size: 1rem;
+                position: absolute;
+                right: 0;
+                top: 60%;
+                padding: 12px;
+                background-color: #4CAF50;
+                color: white;
+                border-radius: 4px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        
+            }
+        
+            footer {
+                grid-area: ft;
+                background-color: #828d8b;
+                padding-top: 50px 0;
+                width: 100%;
+                border-radius: 5px;
+            }
+        
+            .footer-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 20px;
+                padding: 20px;
+                text-align: center;
+                margin: 0;
+                
+        
+            }
+        
+            .footer-content {
+                padding: 20px;
+            }
+        
+            .footer-content h3 {
+                font-size: 25px;
+                margin-bottom: 15px;
+                color: white;
+            }
+        
+            .footer-content p,
+            .footer-content ul {
+                color: white;
+                margin: 5px 0;
+            }
+        
+            .footer-content ul {
+                list-style: none;
+                padding: 0;
+            }
+        
+            .footer-content ul li {
+                margin: 5px 0;
+            }
+        
+            .footer-content a {
+                text-decoration: none;
+                color: white;
+                font-size: 15px;
+            }
+        
+            .social-icons {
+                list-style-type: none;
+                padding: 2px;
+                display: flex;
+                justify-content: center;
+            }
+        
+            .social-icons li {
+                margin: 0 10px;
+            }
+        
+            .social-icons i {
+                color: white;
+                font-size: 25px;
+            }
+        
+            .bottom-bar {
+                text-align: center;
+                padding: 15px 0;
+                width: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        
+            .bottom-bar p {
+                margin: 0;
+                font-size: 15px;
+                color: white;
+        
+            }
+
+ /*css för about-page */
+ #indexwraper.about-page{
+    display: grid;
+    width: 100%;
+    height: auto;
+    gap: 1vh;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    'hd'
+    'hero'
+    'company'
+    'team'
+    'stats'
+    'ft';
+
+ }
+ .about-hero{
+    grid-area: hero;
+    background-color: #828d8b;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 5px;
+
+ }
+ .about-hero h1{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+ }
+
+ .company-info{
+    grid-area: company;
+    background-color: #d7d7d5;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 5px;
+ }
+ .company-info p{
+    grid-area: company;
+    background-color: #d7d7d5;
+    text-align: center;
+    font-size: 2.2rem;
+ }
+ 
+ 
+ .team-section{
+    grid-area: team;
+    background-color: #d7d7d5;
+    padding: 10px 20px;
+    text-align: center;
+ }
+
+ .team-grid{
+    display: flex;
+    gap: 20px;
+   justify-content: center;
+ }
+ 
+ .team-members{
+    background-color: #828d8b;
+    border-radius: 10px;
+    padding: 20px;
+    
+ }
+
+ .team-members img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+ }
+ .team-members h3{
+    margin: 10px 0 5px;
+    font-size: 2rem
+ }
+
+ .company-stats{
+    grid-area: stats;
+    background-color: #5a2f38;
+    color: white;
+    padding: 0px 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.2rem;
+
+ }
+
+ .stats-grid{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    border-radius: 5px;
+
+ }
+ 
+ .stats-grid h3{
+    font-size: 4rem;
+    margin-bottom: 20px;
+ }
+
+
+ .stats-item p{
+    font-size: 2rem;
  }
 
  .footer-container{
@@ -528,6 +1176,9 @@ box-shadow: ;
     text-decoration: none;
     width: fit-content;
  }
+ .play_button{
+    text-decoration: none;
+ }
  .movie-info .material-symbols-outlined{
     position: relative;
     top: 0;
@@ -561,9 +1212,18 @@ box-shadow: ;
     overflow: hidden;
     box-shadow: ;
 }
+.kategorier-card{
+    width: 100%;
+    padding-bottom: 15px;
+    min-height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .kategorier-card img{
     width: 100%;
-    height: 100px;
+    height: 200px !important;
     object-fit: cover;
 }
 
@@ -589,10 +1249,4 @@ box-shadow: ;
     margin: 15px auto;
     border-radius: 5px;
 }
-
-
-    /*css för desktop */
-
-    @media screen and (min-width:501px) {
-        
     }
